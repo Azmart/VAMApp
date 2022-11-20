@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="534.0" prefWidth="799.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Controller">
+    <children>
+        <StackPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffafcc;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane fx:id="SignUpPane" prefHeight="392.0" prefWidth="601.0" style="-fx-background-color: #72ddf7;">
+                    <children>
+                        <ImageView fx:id="su2Back" fitHeight="62.0" fitWidth="62.0" layoutX="14.0" layoutY="14.0" onMousePressed="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Icons/go_back.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="344.0" layoutY="40.0" text="Sign UP">
+                            <font>
+                                <Font name="Arial" size="30.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="suFullName" layoutX="399.0" layoutY="118.0" prefHeight="40.0" prefWidth="278.0" promptText="Full Name" />
+                        <TextField fx:id="suPhNo" layoutX="399.0" layoutY="282.0" prefHeight="40.0" prefWidth="278.0" promptText="Phone Number" />
+                        <TextField fx:id="suUserID" layoutX="399.0" layoutY="172.0" prefHeight="40.0" prefWidth="278.0" promptText="Username" />
+                        <PasswordField fx:id="suPass" layoutX="399.0" layoutY="228.0" prefHeight="40.0" prefWidth="278.0" promptText="Password" />
+                        <Label layoutX="252.0" layoutY="127.0" text="Full Name">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="251.0" layoutY="181.0" text="User ID*">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="254.0" layoutY="237.0" text="Password*">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="254.0" layoutY="291.0" text="Phone No">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                        <Button layoutX="460.0" layoutY="410.0" mnemonicParsing="false" onAction="#registration" style="-fx-background-color: #a3ffb5;" text="Create Account">
+                            <font>
+                                <Font name="Arial" size="19.0" />
+                            </font>
+                        </Button>
+                        <Label layoutX="254.0" layoutY="344.0" text="Gender:">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                        <RadioButton fx:id="male" layoutX="430.0" layoutY="342.0" mnemonicParsing="false" selected="true" text="Male">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="sex" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="female" layoutX="550.0" layoutY="342.0" mnemonicParsing="false" text="Female" toggleGroup="$sex">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </RadioButton>
+                        <Label layoutX="45.0" layoutY="201.0" text="Have an Account?">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="su2lgIn" layoutX="64.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #c774e8;" text="Log In Here">
+                            <font>
+                                <Font name="Arial" size="19.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="controlSuLabel" layoutX="478.0" layoutY="375.0" opacity="0.0" prefHeight="23.0" prefWidth="120.0" text="Enter all Info" textFill="RED">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="successReg" layoutX="430.0" layoutY="457.0" opacity="0.0" prefHeight="23.0" prefWidth="216.0" text="Registration Successful" textFill="#000ef5">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="invalidUID" layoutX="423.0" layoutY="375.0" opacity="0.0" prefHeight="23.0" prefWidth="230.0" text="Username already exists" textFill="RED">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="goBack" layoutX="48.0" layoutY="161.0" opacity="0.0" prefHeight="23.0" prefWidth="157.0" text="Go Back &amp; Login" textFill="#000ef5">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="invalidEmail" layoutX="445.0" layoutY="375.0" opacity="0.0" prefHeight="23.0" prefWidth="187.0" text="Email already exists." textFill="RED">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+
+                <Pane fx:id="LogInPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #72ddf7;">
+                    <children>
+                        <ImageView fitHeight="112.0" fitWidth="101.0" layoutX="144.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Icons/icons8-chat.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="62.0" fitWidth="64.0" layoutX="400.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Icons/user.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="62.0" fitWidth="62.0" layoutX="400.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../Icons/secure.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="144.0" layoutY="257.0" prefHeight="62.0" prefWidth="127.0" text="VAM ChatApp">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="userName" layoutX="470.0" layoutY="140.0" prefHeight="40.0" prefWidth="242.0" promptText="User ID" stylesheets="@../CSS/login.css">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </TextField>
+                        <PasswordField fx:id="passPhrase" layoutX="470.0" layoutY="231.0" prefHeight="40.0" prefWidth="242.0" promptText="Password">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </PasswordField>
+                        <Label layoutX="189.0" layoutY="421.0" prefHeight="51.0" prefWidth="242.0" text="Don't Have an Account?" textAlignment="CENTER">
+                            <font>
+                                <Font name="Arial" size="22.0" />
+                            </font>
+                        </Label>
+                        <Button layoutX="470.0" layoutY="319.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="242.0" style="-fx-background-color: #c774e8;" text="Log In">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnSignUP" layoutX="462.0" layoutY="424.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: #ffc8dd;" text="Sign UP">
+                            <font>
+                                <Font name="Arial" size="18.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="loginError" layoutX="457.0" layoutY="379.0" opacity="0.0" text="Incorrect Username/Password" textFill="#ffafcc">
+                            <font>
+                                <Font name="Arial" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
