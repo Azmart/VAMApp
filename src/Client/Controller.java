@@ -55,8 +55,8 @@ public class Controller {
     public javafx.scene.control.Label loginError;
     @FXML
     public javafx.scene.control.Label invalidUID;
-    public static String username, password, gender;
-    public static ArrayList<Client> loggedInclients = new ArrayList<>();
+    public static String userID, password, gender;
+    public static ArrayList<Client> loggedInClients = new ArrayList<>();
     public static ArrayList<Client> clients = new ArrayList<Client>();
 
     public void registration(ActionEvent actionEvent) {
@@ -152,13 +152,13 @@ public class Controller {
     }
 
     public void login(ActionEvent actionEvent) {
-        username = userName.getText();
+        userID = userName.getText();
         password = passPhrase.getText();
         boolean login = false;
         for (Client x : clients) {
-            if (x.userID.equalsIgnoreCase(username) && x.password.equalsIgnoreCase(password)) {
+            if (x.userID.equalsIgnoreCase(userID) && x.password.equalsIgnoreCase(password)) {
                 login = true;
-                loggedInclients.add(x);
+                loggedInClients.add(x);
                 System.out.println(x.fullName);
                 gender = x.gender;
                 break;
@@ -174,9 +174,9 @@ public class Controller {
     private void changeUI() {
         try {
             Stage stage = (Stage) userName.getScene().getWindow();
-            Parent root = FXMLLoader.load(this.getClass().getResource("HomePage.fxml"));
+            Parent root = FXMLLoader.load(this.getClass().getResource("Room.fxml"));
             stage.setScene(new Scene(root, 700, 500));
-            stage.setTitle(username + "");
+            stage.setTitle(userID + "");
             stage.setOnCloseRequest(event -> {
                 System.exit(0);
             });
