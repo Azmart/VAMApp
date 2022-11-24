@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
@@ -23,25 +24,17 @@
                         <VBox alignment="CENTER" prefHeight="600.0" prefWidth="75.0" styleClass="dark-background" stylesheets="@../CSS/home.css">
                             <children>
                                 <Pane layoutX="10.0" layoutY="208.0" prefHeight="344.0" prefWidth="73.0" />
-                                <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="54.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Icons/icons8-chat.png" />
+                                        <Image url="@../Icons/chat.png" />
                                     </image>
                                     <VBox.margin>
                                         <Insets top="20.0" />
                                     </VBox.margin>
                                 </ImageView>
-                                <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="55.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Icons/icons8_checked_user_male_480px.png" />
-                                    </image>
-                                    <VBox.margin>
-                                        <Insets top="30.0" />
-                                    </VBox.margin>
-                                </ImageView>
-                                <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../Icons/icons8_services_480px.png" />
+                                        <Image url="@../Icons/setting.png" />
                                     </image>
                                     <VBox.margin>
                                         <Insets top="30.0" />
@@ -129,14 +122,14 @@
                         <String fx:value="dark-background" />
                      </styleClass>
                      <children>
-                        <ImageView fitHeight="55.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                        <Circle fill="DODGERBLUE" radius="30.0" stroke="BLACK" strokeType="INSIDE">
                            <HBox.margin>
                               <Insets left="20.0" />
                            </HBox.margin>
-                        </ImageView>
-                        <Label fx:id="log" prefHeight="34.0" prefWidth="185.0" textFill="WHITE">
+                        </Circle>
+                        <Label fx:id="log" prefHeight="34.0" prefWidth="185.0" text="Username" textFill="WHITE">
                            <font>
-                              <Font name="Ebrima" size="18.0" />
+                              <Font name="Fira Code Medium" size="18.0" />
                            </font>
                            <HBox.margin>
                               <Insets left="20.0" />
@@ -151,7 +144,15 @@
                   </ScrollPane>
                   <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" styleClass="radius" stylesheets="@../CSS/home.css">
                      <children>
-                        <TextField prefHeight="46.0" prefWidth="546.0" promptText="Message..." stylesheets="@../CSS/home.css">
+                        <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/attached-file.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextField prefHeight="46.0" prefWidth="556.0" promptText="Message..." stylesheets="@../CSS/home.css">
                            <font>
                               <Font name="Ebrima" size="18.0" />
                            </font>
@@ -163,12 +164,12 @@
                               <String fx:value="radius" />
                            </styleClass>
                         </TextField>
-                        <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="38.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Icons/icons8-sent.png" />
+                              <Image url="@../Icons/send%20(4).png" />
                            </image>
                            <HBox.margin>
-                              <Insets left="20.0" />
+                              <Insets left="15.0" />
                            </HBox.margin>
                         </ImageView>
                      </children>

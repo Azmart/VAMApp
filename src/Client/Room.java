@@ -68,6 +68,8 @@ public class Room extends Thread implements Initializable {
     @FXML
     public ImageView proImage;
     @FXML
+    public ImageView profilePage;
+    @FXML
     public Circle showProPic;
     private FileChooser fileChooser;
     private File filePath;
@@ -120,21 +122,19 @@ public class Room extends Thread implements Initializable {
     }
 
 
-    public void handleProfileBtn(ActionEvent event) {
-        if (event.getSource().equals(profileBtn) && !toggleProfile) {
+    public void handleProfileEvent(javafx.scene.input.MouseEvent event) {
+        if (event.getSource().equals(profilePage) && !toggleProfile) {
 
             profile.toFront();
             chat.toBack();
             toggleProfile = true;
             toggleChat = false;
-            profileBtn.setText("Back");
             setProfile();
-        } else if (event.getSource().equals(profileBtn) && toggleProfile) {
-
+        } else if (event.getSource().equals(profilePage) && toggleProfile) {
             chat.toFront();
             toggleProfile = false;
             toggleChat = false;
-            profileBtn.setText("Profile");
+
         }
     }
 

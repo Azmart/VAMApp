@@ -13,6 +13,11 @@
 .msg-background{
     -fx-background-color: #22333b;
 }
+
+.profile-background{
+    -fx-background-color: #3a2671;
+}
+
 .radius{
     -fx-background-radius: 100px;
 }

@@ -174,7 +174,7 @@ public class Controller {
     private void changeUI() {
         try {
             Stage stage = (Stage) userName.getScene().getWindow();
-            Parent root = FXMLLoader.load(this.getClass().getResource("Room.fxml"));
+            Parent root = FXMLLoader.load(this.getClass().getResource("Tori.fxml"));
             stage.setScene(new Scene(root, 700, 500));
             stage.setTitle(userID + "");
             stage.setOnCloseRequest(event -> {
