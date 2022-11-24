@@ -1,59 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
-            prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <left>
-                <HBox prefHeight="600.0" prefWidth="310.0" BorderPane.alignment="CENTER">
+                <HBox prefHeight="600.0" prefWidth="361.0" BorderPane.alignment="CENTER">
                     <children>
-                        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="73.0" styleClass="dark-background"
-                              stylesheets="@../CSS/home.css">
+                        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="75.0" styleClass="dark-background" stylesheets="@../CSS/home.css">
                             <children>
-                                <Pane layoutX="10.0" layoutY="208.0" prefHeight="344.0" prefWidth="73.0"/>
+                                <Pane layoutX="10.0" layoutY="208.0" prefHeight="344.0" prefWidth="73.0" />
                                 <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Icons/icons8-chat.png"/>
+                                        <Image url="@../Icons/icons8-chat.png" />
                                     </image>
                                     <VBox.margin>
-                                        <Insets top="20.0"/>
+                                        <Insets top="20.0" />
                                     </VBox.margin>
                                 </ImageView>
                                 <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Icons/icons8_checked_user_male_480px.png"/>
+                                        <Image url="@../Icons/icons8_checked_user_male_480px.png" />
                                     </image>
                                     <VBox.margin>
-                                        <Insets top="20.0"/>
+                                        <Insets top="30.0" />
                                     </VBox.margin>
                                 </ImageView>
                                 <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Icons/icons8_services_480px.png"/>
+                                        <Image url="@../Icons/icons8_services_480px.png" />
                                     </image>
                                     <VBox.margin>
-                                        <Insets top="20.0"/>
+                                        <Insets top="30.0" />
                                     </VBox.margin>
                                 </ImageView>
-                                <Pane prefHeight="344.0" prefWidth="73.0"/>
-                                <ImageView fitHeight="50.0" fitWidth="40.0" layoutX="27.0" layoutY="360.0"
-                                           pickOnBounds="true" preserveRatio="true">
+                                <Pane prefHeight="344.0" prefWidth="73.0" />
+                                <ImageView fitHeight="50.0" fitWidth="40.0" layoutX="27.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../Icons/logout.png"/>
+                                        <Image url="@../Icons/logout.png" />
                                     </image>
                                     <VBox.margin>
-                                        <Insets bottom="20.0"/>
+                                        <Insets bottom="20.0" />
                                     </VBox.margin>
                                 </ImageView>
                             </children>
                         </VBox>
+                  <VBox prefHeight="600.0" prefWidth="292.0" styleClass="skyblue-background" stylesheets="@../CSS/home.css">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" stylesheets="@../CSS/home.css">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8_search_512px_1.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField prefHeight="40.0" prefWidth="202.0" promptText="Search" styleClass="transparent-background" stylesheets="@../CSS/home.css">
+                                 <font>
+                                    <Font name="Ebrima" size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="dark-background" />
+                              <String fx:value="radius" />
+                           </styleClass>
+                        </HBox>
+                        <ScrollPane prefHeight="528.0" prefWidth="290.0" styleClass="skyblue-background" stylesheets="@../CSS/home.css">
+                          <content>
+                            <AnchorPane prefHeight="514.0" prefWidth="276.0" styleClass="skyblue-background" stylesheets="@../CSS/home.css">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="77.0" prefWidth="290.0" styleClass="top-border" stylesheets="@../CSS/home.css">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Icons/user.png" />
+                                             </image>
+                                          </ImageView>
+                                          <VBox prefHeight="82.0" prefWidth="202.0">
+                                             <children>
+                                                <Label prefHeight="29.0" prefWidth="123.0" text="Label">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label prefHeight="29.0" prefWidth="123.0" text="Label">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
                     </children>
                 </HBox>
             </left>
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="638.0" stylesheets="@../CSS/home.css">
+                     <styleClass>
+                        <String fx:value="bottom-border" />
+                        <String fx:value="dark-background" />
+                     </styleClass>
+                     <children>
+                        <ImageView fitHeight="55.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="log" prefHeight="34.0" prefWidth="185.0" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ScrollPane prefHeight="465.0" prefWidth="638.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="466.0" prefWidth="636.0" styleClass="msg-background" stylesheets="@../CSS/home.css" />
+                    </content>
+                  </ScrollPane>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" styleClass="radius" stylesheets="@../CSS/home.css">
+                     <children>
+                        <TextField prefHeight="46.0" prefWidth="546.0" promptText="Message..." stylesheets="@../CSS/home.css">
+                           <font>
+                              <Font name="Ebrima" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="dark-background" />
+                              <String fx:value="radius" />
+                           </styleClass>
+                        </TextField>
+                        <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/icons8-sent.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="20.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
         </BorderPane>
     </children>
 </AnchorPane>
